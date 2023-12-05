@@ -14,7 +14,7 @@ namespace projectOOP
             get { return phongTro; }
             set { phongTro = value; }
         }
-        public NguoiChuNha(string hoTen, int tuoi, int cmnd, string gioiTinh, string ngheNghiep, int soDienThoai) : base(hoTen, tuoi, cmnd, soDienThoai, gioiTinh, ngheNghiep)
+        public NguoiChuNha(string hoTen, int tuoi, int cmnd, string soDienThoai, string gioiTinh, string ngheNghiep) : base(hoTen, tuoi, cmnd, soDienThoai, gioiTinh, ngheNghiep)
         {
         }
         public void ThemPhong(PhongTro phongTro)
@@ -23,9 +23,11 @@ namespace projectOOP
         }
         public void InDanhSachPhong()
         {
+            int i = 0;
             foreach (PhongTro phong in phongTro)
             {
-
+                Console.WriteLine($">>PHONG SO {i}<<");
+                phong.InThongTin();
             }
         }
     }

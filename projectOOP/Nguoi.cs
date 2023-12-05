@@ -8,13 +8,13 @@ namespace projectOOP
 {
     class Nguoi
     {
-        private string hoTen;
         private int tuoi;
         private int cmnd;
+        private string hoTen;
         private string gioiTinh;
         private string ngheNghiep;
-        private int soDienThoai;
-        public int SoDienThoai
+        private string soDienThoai;
+        public string SoDienThoai
         {
             get { return soDienThoai; }
             set { soDienThoai = value; }
@@ -44,7 +44,7 @@ namespace projectOOP
             get { return hoTen; }
             set { hoTen = value; }
         }
-        public Nguoi(string hoTen, int tuoi, int soDienThoai, int cmnd, string gioiTinh, string ngheNghiep)
+        public Nguoi(string hoTen, int tuoi, int cmnd, string soDienThoai, string gioiTinh, string ngheNghiep)
         {
             this.hoTen = hoTen;
             this.tuoi = tuoi;

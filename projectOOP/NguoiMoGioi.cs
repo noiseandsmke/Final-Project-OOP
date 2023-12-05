@@ -8,7 +8,7 @@ namespace projectOOP
 {
     class NguoiMoGioi : Nguoi
     {
-        public NguoiMoGioi(string hoTen, int tuoi, int cmnd, string gioiTinh, string ngheNghiep, int soDienThoai) : base(hoTen, tuoi, cmnd, soDienThoai, gioiTinh, ngheNghiep)
+        public NguoiMoGioi(string hoTen, int tuoi, int cmnd, string soDienThoai, string gioiTinh, string ngheNghiep) : base(hoTen, tuoi, cmnd, soDienThoai, gioiTinh, ngheNghiep)
         {
             
         }
