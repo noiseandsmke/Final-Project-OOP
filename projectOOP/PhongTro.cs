@@ -10,12 +10,11 @@ namespace projectOOP
     class PhongTro
     {
         private int dienTich;
-        private int giaCa;
+        private double giaCa;
         private int soNguoiO;
         private string noiThat;
         private string diaChi;
         private string yeuCau;
-        private bool tinhTrang;
         private bool phongDanhChoNu;
         private bool nuoiThuCung;
         private bool loiDiRieng;
@@ -30,7 +29,7 @@ namespace projectOOP
             get { return noiThat; }
             set { noiThat = value; }
         }
-        public int GiaCa
+        public double GiaCa
         {
             get { return giaCa; }
             set { giaCa = value; }
@@ -39,11 +38,6 @@ namespace projectOOP
         {
             get { return diaChi; }
             set { diaChi = value; }
-        }
-        public bool TinhTrang
-        {
-            get { return tinhTrang; }
-            set { tinhTrang = value; }
         }
         public bool PhongDanhChoNu
         {
@@ -77,6 +71,7 @@ namespace projectOOP
         }
         public void InThongTin()
         {
+            Console.WriteLine("###################################");
             Console.WriteLine($"Dien tich phong: {dienTich}");
             Console.WriteLine($"Noi that trong phong: {noiThat}");
             Console.WriteLine($"Gia phong: {giaCa}");
@@ -115,18 +110,13 @@ namespace projectOOP
             }
             Console.WriteLine($"Duoc o toi da: {soNguoiO} nguoi");
             Console.WriteLine($"Yeu cau rieng: {yeuCau}");
+            Console.WriteLine("###################################");
         }
-        public PhongTro(string diaChi, int GiaCa)
-        {
-            this.diaChi = diaChi;
-            this.GiaCa = GiaCa;
-        }
-        public PhongTro(int dienTich, string noiThat, int giaCa, string diaChi, bool tinhTrang, bool phongDanhChoNu, bool nuoiThuCung, bool loiDiRieng, bool gioGiacTuDo, int soNguoiO, string yeuCau)
+        public PhongTro(int dienTich, string noiThat, int giaCa, string diaChi, bool phongDanhChoNu, bool nuoiThuCung, bool loiDiRieng, bool gioGiacTuDo, int soNguoiO, string yeuCau)
         {
             this.dienTich = dienTich;
             this.noiThat = noiThat;
             this.giaCa = giaCa;
-            this.tinhTrang = tinhTrang;
             this.diaChi = diaChi;
             this.phongDanhChoNu = phongDanhChoNu;
             this.nuoiThuCung = nuoiThuCung;

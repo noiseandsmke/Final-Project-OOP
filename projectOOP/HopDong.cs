@@ -8,12 +8,20 @@ namespace projectOOP
 {
     class HopDong
     {
-        private int tienCoc;
+        private double tienCoc;
         private PhongTro phongThue;
         private NguoiChuNha benChoThue;
         private NguoiThue benThue;
         private DateTime ngayKy;
         private DateTime ngayHetHan;
+        private Nguoi kyVoi;
+
+        public Nguoi KyVoi
+        {
+            get { return kyVoi; }
+            set { kyVoi = value; }
+        }
+
         public DateTime NgayKy
         {
             get { return ngayKy; ; }
@@ -39,7 +47,7 @@ namespace projectOOP
             get { return phongThue; }
             set { phongThue = value; }
         }
-        public int TienCoc
+        public double TienCoc
         {
             get { return tienCoc; }
             set { tienCoc = value; }
@@ -52,6 +60,15 @@ namespace projectOOP
             this.benThue = benThue;
             this.ngayKy = ngayKy;
             this.ngayHetHan = ngayHetHan;
+        }
+        public void ThongTinHopDong()
+        {
+            Console.WriteLine("##################################");
+            Console.WriteLine($">>>DA KY HOP DONG VOI {kyVoi.HoTen}");
+            Console.WriteLine($"SO TIEN COC: {tienCoc}");
+            Console.WriteLine($"NGAY KY: {ngayKy}");
+            Console.WriteLine($"NGAY HET HAN: {ngayHetHan}");
+            Console.WriteLine("##################################");
         }
     }
 }
