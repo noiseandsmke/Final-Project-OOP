@@ -16,10 +16,12 @@ namespace projectOOP
         }
         public NguoiChuNha(string hoTen, int tuoi, int cmnd, string soDienThoai, string gioiTinh, string ngheNghiep) : base(hoTen, tuoi, cmnd, soDienThoai, gioiTinh, ngheNghiep)
         {
+            phongTro = new List<PhongTro>();
         }
-        public void ThemPhong(PhongTro phongTro)
+        public void ThemPhong(PhongTro phongCanThem)
         {
-            PhongTro.Add(phongTro);
+            phongTro.Add(phongCanThem);
+            phongCanThem.ChuNha = this;
         }
         public void InDanhSachPhong()
         {

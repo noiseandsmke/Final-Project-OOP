@@ -19,6 +19,13 @@ namespace projectOOP
         private bool nuoiThuCung;
         private bool loiDiRieng;
         private bool gioGiacTuDo;
+        private NguoiChuNha chuNha;
+
+        public NguoiChuNha ChuNha
+        {
+            get { return chuNha; }
+            set { chuNha = value; }
+        }
         public int DienTich
         {
             get { return dienTich; }
@@ -124,6 +131,7 @@ namespace projectOOP
             this.gioGiacTuDo = gioGiacTuDo;
             this.soNguoiO = soNguoiO;
             this.yeuCau = yeuCau;
+            this.chuNha = null;
         }
     }
 }

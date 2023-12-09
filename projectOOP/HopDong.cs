@@ -15,13 +15,11 @@ namespace projectOOP
         private DateTime ngayKy;
         private DateTime ngayHetHan;
         private Nguoi kyVoi;
-
         public Nguoi KyVoi
         {
             get { return kyVoi; }
             set { kyVoi = value; }
         }
-
         public DateTime NgayKy
         {
             get { return ngayKy; ; }
@@ -52,6 +50,13 @@ namespace projectOOP
             get { return tienCoc; }
             set { tienCoc = value; }
         }
+        public HopDong(double tienCoc, DateTime ngayKy, DateTime ngayHetHan, Nguoi kyVoi)
+        {
+            this.tienCoc = tienCoc;
+            this.ngayKy = ngayKy;
+            this.ngayHetHan = ngayHetHan;
+            this.kyVoi = kyVoi;
+        }
         public HopDong(int tienCoc, PhongTro phongThue, NguoiChuNha benChoThue, NguoiThue benThue, DateTime ngayKy, DateTime ngayHetHan)
         {
             this.tienCoc = tienCoc;
@@ -63,12 +68,12 @@ namespace projectOOP
         }
         public void ThongTinHopDong()
         {
-            Console.WriteLine("##################################");
-            Console.WriteLine($">>>DA KY HOP DONG VOI {kyVoi.HoTen}");
+            Console.WriteLine("..............................................");
+            Console.WriteLine($">>> DA KY HOP DONG VOI CHU TRO: {kyVoi.HoTen}");
             Console.WriteLine($"SO TIEN COC: {tienCoc}");
             Console.WriteLine($"NGAY KY: {ngayKy}");
             Console.WriteLine($"NGAY HET HAN: {ngayHetHan}");
-            Console.WriteLine("##################################");
+            Console.WriteLine("..............................................");
         }
     }
 }

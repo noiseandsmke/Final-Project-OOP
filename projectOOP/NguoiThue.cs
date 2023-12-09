@@ -9,13 +9,17 @@ namespace projectOOP
     class NguoiThue : Nguoi
     {
         private HopDong hopDong;
-
+        private PhongTro phongThue;
         public HopDong HopDong
         {
             get { return hopDong; }
             set { hopDong = value; }
         }
-
+        public PhongTro PhongThue
+        {
+            get { return phongThue; }
+            set { phongThue = value; }
+        }
         public NguoiThue(string hoTen, int tuoi, int cmnd, string soDienThoai, string gioiTinh, string ngheNghiep) : base(hoTen, tuoi, cmnd, soDienThoai, gioiTinh, ngheNghiep)
         {
         }
@@ -34,19 +38,37 @@ namespace projectOOP
                 return null;
             }
         }
+        private string ThongTinTro()
+        {
+            if (phongThue == null)
+            {
+                return $"dang di tim tro";
+            }
+            else
+            {
+                return $"dang thue tro o {phongThue.DiaChi}";
+            }
+        }
         public void InThongTin()
         {
+            Console.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
             Console.WriteLine($"Ho ten: {HoTen}");
             Console.WriteLine($"Tuoi : {Tuoi}");
             Console.WriteLine($"Gioi tinh: {GioiTinh}");
             Console.WriteLine($"So dien thoai: {SoDienThoai}");
+            Console.WriteLine($"Thong tin tro: {ThongTinTro()}");
+            if (phongThue != null)
+            {
+                Console.WriteLine($"Co hop dong den: {hopDong.HanHopDong}");
+            }
+            Console.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         }
         public void KyHopDong(PhongTro phong, NguoiChuNha chuNha, DateTime ngayHetHan)
         {
-            hopDong.TienCoc = phong.GiaCa / 2;
-            hopDong.NgayKy = DateTime.Now;
-            hopDong.HanHopDong = ngayHetHan;
-            hopDong.KyVoi = chuNha;
+            double tienCoc = (double)phong.GiaCa / 2;
+            this.phongThue = phong;
+            hopDong = new HopDong(tienCoc, DateTime.Now, ngayHetHan, chuNha);
+            hopDong.ThongTinHopDong();
         }
     }
 }
